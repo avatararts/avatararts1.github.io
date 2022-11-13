@@ -1,0 +1,31 @@
+body {
+    background: rgb(0, 0, 0);
+}
+
+div#inked-painted {
+    position: relative;
+    font-size: 0;
+    -ms-touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+div#inked-painted img {
+    width: 100%;
+    height: auto;
+}
+
+div#colored {
+    background-image: url(images/bori.jpeg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    border-right: 3px solid red;
+}
+
+div#inked-painted:hover {
+    cursor: col-resize;
+}
