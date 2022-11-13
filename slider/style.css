@@ -16,7 +16,7 @@ div#inked-painted img {
 }
 
 div#colored {
-    background-image: url(images/bori.jpeg);
+    background-image: url(./images/bori.jpeg);
     position: absolute;
     top: 0;
     left: 0;
