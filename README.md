@@ -1,2 +1,2 @@
 # avatararts.github.io
-A Hub for All My Avatar Art
+All The Goods of The Avatar Arts

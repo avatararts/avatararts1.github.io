@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>```<br />&lt;html&gt; <br />&lt;head&gt; <br />&lt;title&gt;Image Gallery&lt;/title&gt; <br />&lt;script&gt; <br />function getImages(){ <br />// List of folders in directory<br />const folders = ["small", "medium", "large"];</p>
+<p>// Loop through each folder and grab images<br />for(let i=0;i&lt;folders.length;i++){ <br />const directory = "images/" + folders[i] + "/";</p>
+<p>// Get list of images from the current directory<br />let fileExtension = ".jpg"; <br />let files = fs.readdirSync(directory);</p>
+<p>// Create HTML element with image source and link to page<br />files.forEach(function (file) { <br />if (path.extname(file).toLowerCase() === fileExtension) {</p>
+<p>let srcPath = directory + file;</p>
+<p>let htmlElement = document.createElement('img'); <br />htmlElement.src = srcPath;</p>
+<p>// Add click event listener to open page when image is clicked<br />htmlElement.addEventListener("click", () =&gt; window.open('page-to-open?imgSrc='+srcPath));</p>
+<p>// Append img element to parent element in HTML page<br />document.getElementById('parent-element').appendChild(htmlElement);</p>
+<p>} <br />}); <br />}</p>
+<p>}</p>
+<p>&lt;/script&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body onload="getImages()"&gt; &lt;!-- Load images when page is rendered--&gt; &lt;div id="parent-element"&gt;&lt;/div&gt; &lt;!-- Parent element for all images --&gt; &lt;/body&gt; &lt;/html&gt;</p>
+</body>
+</html>

@@ -1,0 +1,94 @@
+There are a few issues in the HTML code:
+
+There is no opening <head> tag before the <div class="content"> element.
+The <fa-align-center> tag in the h2 element is not a valid HTML tag. Instead, you can use the text-align: center property in CSS to center the text.
+The closing </fa-align-center> tag is unnecessary and should be removed.
+There is an extra </div> tag at the end of the code.
+Here's the corrected code:
+
+php
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/info.css">
+    <title>80's Info Card</title>
+    <style>
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            display: block;
+            padding: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contents {
+            margin: 100px 0 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Ai Gallery</a></li>
+                <li><a href="https://bit.ly/iChoake">Youtube</a></li>
+                <li><a href="form.html">ConTacT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <main>
+            <div class="container">
+                <div id="gradient"></div>
+                <div id="card">
+                    <a href="index.html">
+                        <img src="./images/csteven.png" alt="the Hidden One">
+                    </a>
+                    <h2 style="text-align: center;">
+                        <h2t style="font-variant:small-caps;">Steven Chaplinski</h2t>
+                    </h2>
+                    <center>
+                        <strong><p>Conceptual Artist | PhotoMods | Cover Art</p></strong>
+                    </center>
+                    <hr>
+                    <center>
+                        <p>
+                            I am a Conceptual Artist and Editor. Primarily PhotoMods | Cover Art | Overlays and by Request.
+                            <strong><center>TechnoMancer..</center></strong>
+                        </p>
+                    </center>
+                </div>
+            </div>
+        </main>
+
+</body>
+</html>
