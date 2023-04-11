@@ -4,6 +4,10 @@ body {
   color: #fff;
  text-shadow: 2px 2px 2px  #000;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
 .gallery>a, .gallery::after {
   flex-basis: var(--w);
 }
